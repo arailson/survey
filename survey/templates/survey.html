@@ -1,0 +1,48 @@
+{% extends 'layout.html' %} {% block content %}
+<form method="POST" action="">
+    {{ form.hidden_tag() }}
+
+    <h3>Qual sua faixa de Idade</h3>
+    <div class="form-group">
+        {% for subfield in form.age_range %}
+            <div class="custom-control custom-radio">
+                {{ subfield(class="custom-control-input") }}
+                {{ subfield.label(class="custom-control-label") }}
+            </div>
+        {% endfor %}
+    </div>
+
+    <h3>Qual seu convênio</h3>
+    <div class="form-group">
+        {% for subfield in form.enrollment_range %}
+            <div class="custom-control custom-radio">
+                {{ subfield(class="custom-control-input") }}
+                {{ subfield.label(class="custom-control-label") }}
+            </div>
+        {% endfor %}
+    </div>
+
+    <h3>Qual sua faixa salarial</h3>
+    <div class="form-group">
+        {% for subfield in form.salary_range %}
+            <div class="custom-control custom-radio">
+                {{ subfield(class="custom-control-input") }}
+                {{ subfield.label(class="custom-control-label") }}
+            </div>
+        {% endfor %}
+    </div>
+
+    <h3>Por que você realizou o empréstimo</h3>
+    <div class="form-group">
+        {% for subfield in form.reason_range %}
+            <div class="custom-control custom-radio">
+                {{ subfield(class="custom-control-input") }}
+                {{ subfield.label(class="custom-control-label") }}
+            </div>
+        {% endfor %}
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
+{% endblock content %}

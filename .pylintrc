@@ -1,0 +1,6 @@
+init-hook='import sys; sys.path.append(".")'
+
+[MASTER]
+disable=
+    missing-docstring,
+    line-too-long,
